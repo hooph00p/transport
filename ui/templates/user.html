@@ -1,0 +1,78 @@
+<p>
+  <h1 class="title is-1">Hello, {{data.user.name}}!</h1>
+  <div class="notification is-primary" ng-if="data.user.elderly || data.user.student || data.user.employee">
+  <h2 class="title is-4">Discounts on your account:</h2>
+
+  <span class="tag" ng-if="data.user.elderly"><i class="fa fa-check"></i>Senior Citizen Discount</span>
+  <span class="tag" ng-if="data.user.student"><i class="fa fa-check"></i>Student Discount</span>
+  <span class="tag" ng-if="data.user.employee"><i class="fa fa-check"></i>Employee Discount</span>
+</div>
+
+  <div class="box" id="actions">
+    <h2 class="title is-4">Controls</h2>
+    <button ng-disabled="data.order !== undefined" class="button is-primary" ng-click="newPass()">Get a New Pass</button>
+    <button class="button" disabled="true">Change Password</button>
+  <hr/>
+  <div id="active" ng-if="data.user.passes.length > 0">
+  <h2 class="title is-5">Current Passes</h2>
+    <table class="table" >
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Transportation Type</th>
+          <th colspan="2" style="width:60%">Payment</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="pass in data.user.passes">
+          <td>{{pass.id}}</td>
+          <td>{{pass.type}}</td>
+          <td>{{pass.payment}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="new" ng-if="data.order !== undefined">
+    <form>
+    <h2 class="title is-5">New Pass</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Transportation Type</th>
+          <th colspan="2" style="width:60%">Payment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="select">
+               <select ng-model="data.order.type" required>
+                 <option>Subway</option>
+                 <option>Commuter Rail</option>
+                 <option>Bus</option>
+               </select>
+             </span>
+          </td>
+          <td>
+            <span class="select">
+               <select ng-model="data.order.payment" required>
+                 <option>Prepaid</option>
+                 <option>Monthly</option>
+               </select>
+             </span>
+          </td>
+          <td>
+            <span  ng-if="pass.type=='Prepaid'" class="tag is-info">
+            You will not be charged until you add funds to this card.
+          </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="button is-primary" ng-click="CompleteOrder()">Complete Order</button>
+  </form>
+  </div>
+</div>
+</p>

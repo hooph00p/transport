@@ -1,0 +1,40 @@
+<form>
+  <p class="control">
+    <label class="label">Name:</label>
+    <input class="input" name="username" type="text" ng-model="data.username"></input>
+  </p>
+  <p class="control">
+    <label class="label">Password:</label>
+    <input class="input" disabled="true" ng-model="data.password" name="password" type="password">
+    <span class="help is-danger">Password protection not yet implemented.</span>
+  </p>
+  <h1 class="title is-5">User Discounts</h1>
+  <p class="control">
+  <label class="checkbox">
+    <input type="checkbox" ng-model="data.elderly">
+    I am 65 or older.
+  </label>
+</p>
+<p class="control">
+  <label class="checkbox">
+    <input type="checkbox" ng-model="data.student">
+    I am a current student.
+  </label>
+</p>
+<p class="control">
+  <label class="checkbox">
+    <input type="checkbox" ng-model="data.employee">
+    I am an employee.
+  </label>
+</p>
+  <button class="button is-primary" ng-click="register()">Register</button>
+  <hr/>
+  <article ng-if="data.message !== undefined" class="message {{data.message.type}}">
+    <div class="message-header">
+      Info
+    </div>
+    <div class="message-body">
+      {{ data.message.content }}
+    </div>
+  </article>
+</form>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="App">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="public/bulma.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  </head>
+  <body>
+  <section class="hero">
+      <nav class="nav">
+      <div class="nav-left">
+        <span class="nav-item">
+          <a class="button" href="#/">
+            <span class="icon">
+              <i class="fa fa-home"></i>
+            </span>
+            <span>Home</span>
+          </a>
+        </span>
+      </div>
+    </nav>
+    <div class="hero-body">
+      <div class="container">
+        <div data-ng-view data-autoscroll="true"></div>
+      </div>
+    </div>
+  </section>
+  </body>
+</html>
