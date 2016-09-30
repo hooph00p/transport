@@ -1,7 +1,5 @@
 # Pass Management System
 
-### @hooph00p
-
 ## Usage
 
 #### Requirements
@@ -89,3 +87,11 @@ If ports `:8080` and `:8081` are free on your machine, you should see be able to
 - [ ] Expand Testing
 - [ ] Expand User Stories
 - [ ] Brand User Interface
+
+****
+
+### Tools Used:
+
+- [Bulma](http://bulma.io)
+- [Angular](http://angularjs.org)
+- [Go](http://golang.org/)
