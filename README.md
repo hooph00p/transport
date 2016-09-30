@@ -51,19 +51,19 @@ If ports `:8080` and `:8081` are free on your machine, you should see be able to
 
 **Goal: Allow for users to login and create prepaid passes.**
 
-- [ ] Create Views
-  - [ ] Login
-  - [ ] User Page
+- [x] Create Views
+  - [x] Login
+  - [x] Account Page
 
-- [ ] Show passes
-- [ ] Allow Creation of Passes
+- [x] Show passes
+- [x] Allow Creation of Passes
 
 #### User Stories:
 
 - [x] Joe wants to register.
 - [x] Joe wants to log in.
-- [ ] Joe wants to add a monthly commuter pass.
-- [ ] Joe wants to see how many passes he has.
+- [x] Joe wants to add a monthly commuter pass.
+- [x] Joe wants to see how many passes he has.
 - [ ] Joe wants to add funds to a prepaid pass.
 
 ## 2. Lateral Development
